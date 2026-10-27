@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="DataPilot AI — explore business data, ask questions, and inspect calculated answers.">
+  <title>DataPilot AI · Your Analytics Copilot</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/vendor/plotly.js" defer></script><script src="/ui.js" defer></script><script src="/app.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#content">Skip to analysis</a>
+<aside class="sidebar">
+  <a class="brand" href="#dashboard" aria-label="DataPilot AI home"><span class="brandmark">D<span>↗</span></span><div>DataPilot <b>AI</b><small>Your Analytics Copilot</small></div></a>
+  <div class="workspace-tag"><span class="dot"></span><span>Personal workspace</span><span id="deployment-mode" class="local-tag">…</span></div>
+  <nav id="navigation" aria-label="Main navigation"></nav>
+  <div class="sidebar-bottom"><div class="privacy"><span>◇</span><div><strong id="privacy-title">Your analytics workspace</strong><small id="privacy-detail">Calculated answers. Clear evidence.</small></div></div><button class="workspace-help" id="help-button"><span class="avatar">DP</span><span>Workspace guide<small>How DataPilot works</small></span><span>↗</span></button></div>
+</aside>
+<div class="shell">
+  <header class="topbar"><div><span class="muted">Workspace</span><span class="breadcrumb">/</span><strong id="breadcrumb">Dashboard</strong></div><button id="model-state" class="status-pill">Checking AI…</button></header>
+  <main>
+    <div class="page-heading"><div><p class="eyebrow" id="eyebrow">YOUR DATA, IN PERSPECTIVE</p><h1 id="page-title">Business overview</h1><p id="page-description">A clear picture of your data. A smarter next step.</p></div><button class="primary" id="upload-button">＋ Import dataset</button><input id="file-input" type="file" accept=".csv,.xlsx,.xls" hidden></div>
+    <div id="dataset-strip" class="dataset-strip"></div><div id="global-filters"></div>
+    <div id="notice" class="notice" role="status" hidden></div><div id="alert" role="alert" hidden></div>
+    <section id="content" tabindex="-1"></section>
+    <footer><strong>DataPilot AI</strong><span>Conversational AI Agent for Business Data Analytics</span><span>Calculated from your data · Powered by DuckDB</span></footer>
+  </main>
+</div>
+<div id="busy" class="busy" role="status" aria-live="polite" hidden><span class="spinner"></span><span id="busy-text">Analyzing your data…</span></div>
+<dialog id="about"><button class="icon-button close" id="close-about" aria-label="Close workspace guide">×</button><p class="eyebrow">BUILT FOR CLARITY</p><h2>Meet your analytics copilot</h2><p>Upload a spreadsheet, review its quality, then explore the dashboard or ask a question. Numerical answers come from actual calculations on the active data.</p><p>Prepared data keeps every row, with safe type conversions and derived fields. Cleaning creates a separate copy after you preview and apply the changes.</p><p id="privacy-explanation"></p><p>Sessions and conversations are temporary. Download results before closing the session. Segment labels describe relative behavior; statistical anomalies are signals for review.</p><div class="dialog-actions"><a href="#quality" id="guide-quality">Review data quality →</a></div></dialog>
+<dialog id="provider-dialog"><button class="icon-button close" id="close-provider" aria-label="Close AI status">×</button><p class="eyebrow">AI CONNECTION</p><h2 id="provider-title">AI status</h2><div id="provider-details"></div><button id="provider-refresh">Check connection</button></dialog>
+<noscript>Enable JavaScript to use the DataPilot analytics interface.</noscript>
+</body></html>

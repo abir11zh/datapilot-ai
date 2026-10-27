@@ -1,0 +1,37 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.pem
+*.key
+.pytest_cache/
+.DS_Store
+*.log
+coverage.xml
+htmlcov/
+.ipynb_checkpoints/
+
+# Local data and verification exports
+data/processed/*.parquet
+data/processed/*.csv
+frontend/node_modules/
+data/processed/reference_cache_*.json
+
+# Uploaded/private data and locally generated evidence never belong in a public repo.
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+docs/*verification.json
+docs/screenshots/
+.coverage
+.ruff_cache/
+*.egg-info/
+build/
+dist/
